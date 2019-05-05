@@ -18,5 +18,10 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', TemplateView.as_view(template_name='Demo.html'), name='index'),
+    url(r'^$', TemplateView.as_view(template_name='index.html'), name='index'),
+    url(r'index$', TemplateView.as_view(template_name='index.html'), name='index'),
+    url(r'chronic$', TemplateView.as_view(template_name='chronic.html'), name='chronic'),
+    url(r'NCDindex$', TemplateView.as_view(template_name='NCDindex.html'), name='NCDindex'),
+    url(r'quota$', TemplateView.as_view(template_name='quota.html'), name='quota'),
+    url(r'trend$', TemplateView.as_view(template_name='trend.html'), name='trend'),
 ]
